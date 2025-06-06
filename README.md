@@ -9,8 +9,8 @@ This roadmap will guide you step-by-step from beginner to building full-stack ap
 ✅ Goal: Learn how JavaScript works and build interactive websites.
 
 ### 🔹 Topics:
-- [ ] Variables (`let`, `const`)
-- [ ] Data types (string, number, boolean, null, undefined)
+- [/] Variables (`let`, `const`)
+- [/] Data types (string, number, boolean, null, undefined)
 - [ ] Conditionals (`if`, `else`, `switch`)
 - [ ] Loops (`for`, `while`, `forEach`)
 - [ ] Functions (declaration, expression, arrow)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: auto;
+        color: #e7ff0c;
+        font-family: sans-serif;
+        text-align: center;
+        background-color: #1a1a1a;
+    }
+    input, button{
+        background-color: #e7ff0c;
+        color: #1a1a1a;
+        font-size: medium;
+        margin: 10px;
+        border-radius: 10px;
+        padding: 10px 10px;
+    }
+    #output{
+        color: #e7ff0c;
+        text-align: justify;
+    }
+</style>
+<body>
+  
+  <h1>Level 6 – Combined Data Types, Conditionals, Loops</h1>
+
+  <label for="inputData">
+    1) Enter multiple values separated by commas (e.g. <code>42, true, hello, null, undefined</code>):
+  </label><br>
+  <input type="text" id="inputData" placeholder="Type something, then click “Process”"><br>
+  <button onclick="runLevel6()">Process</button>
+
+  <div id="output"></div>
+<script src="day2lvl6.js"></script>
+</body>
+</html>
