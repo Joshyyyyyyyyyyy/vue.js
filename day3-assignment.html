@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputName" placeholder="ENTER YOIUR NAME: ">
+    <button onclick="processName()">Process</button>
+    <button onclick=" coffeeCounts += 5; console.log(`Total Price: ${coffeeCounts}`);">Coffee</button>
+    <button onclick=" bagelCounts += 3; console.log(`Total Price: ${bagelCounts}`);">Bagels</button>
+    <button onclick=" soupCounts += 9; console.log(`Total Price: ${soupCounts}`);">Soup</button>
+    <button onclick="totalCost()">Cost</button>
+ 
+
+</body>
+        <script>
+            let coffeeCounts = 5;
+            let bagelCounts = 3;
+            let soupCounts = 9;
+            let taxTotal = 0.1;
+
+            
+            function totalCost (){
+                let cost = coffeeCounts + bagelCounts + soupCounts;
+                let taxTotals = (coffeeCounts + bagelCounts + soupCounts) * taxTotal;
+                console.log (`TOTAL COST: ${taxTotals}`);
+            }
+            
+            let urName = "Joshua";
+            let name = document.getElementById("inputName").value;
+            function processName(){
+                console.log(typeof name);
+                console.log(urName);
+            }
+        </script>
+</html>
