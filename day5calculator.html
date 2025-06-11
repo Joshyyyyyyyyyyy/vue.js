@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 30px;
+        font-family: sans-serif;
+    }
+    body{
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #1a1a1a;
+    }
+    .container{
+        justify-content: center;
+        grid-gap: 5px;
+        padding: 20px 20px;
+        background-color: #303030;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .center {
+      width: auto;        
+    }
+.circle-button{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: #1a1a1a;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: end;
+    color: #fff;
+    font-weight: 600;
+    font-size: larger;
+}
+</style>
+<body>
+   <div class="container">
+    <div class="center">
+        <div><h2 id="output" >0</h2></div>
+        <br>
+         <button class="circle-button" style="background-color: #5e5e5e; color: #fff; font-size: large;" onclick="clearDisplay()">C</button>
+        <button class="circle-button" style="background-color: #5e5e5e; color: #fff; font-size: large;">+/-</button>
+        <button class="circle-button" style="background-color: #5e5e5e; color: #fff; font-size: large;">%</button>
+        <button class="circle-button" style="background-color: #fff350; color: #1a1a1a; font-size: large;" onclick="setOperator('/')">/</button>
+        <br>
+        <button class="circle-button" onclick="press('7')">7</button>
+        <button class="circle-button" onclick="press('8')">8</button>
+        <button class="circle-button" onclick="press('9')">9</button>
+        <button class="circle-button" style="background-color: #fff350; color: #1a1a1a; font-size: large;" onclick="setOperator('*')">x</button>
+        <br>
+        <button class="circle-button" onclick="press('4')">4</button>
+        <button class="circle-button" onclick="press('5')">5</button>
+        <button class="circle-button" onclick="press('6')">6</button>
+        <button class="circle-button" style="background-color: #fff350; color: #1a1a1a; font-size: large;" onclick="setOperator('-')">-</button>
+        <br>
+        <button class="circle-button" onclick="press('1');">1</button>
+        <button class="circle-button" onclick="press('2')">2</button>
+        <button class="circle-button" onclick="press('3')">3</button>
+        <button class="circle-button" style="background-color: #fff350; color: #1a1a1a; font-size: large;" onclick="setOperator('+')">+</button>
+        <br>
+        <button class="circle-button" style="width: 110px;" onclick="press('0')">0</button>
+        <button class="circle-button" onclick="addDecimal()">.</button>
+        <button class="circle-button" style="background-color: #fff350; color: #1a1a1a; font-size: large;" onclick="calculate()">=</button>
+    </div>
+      
+   </div>
+</body>
+<script>
+     let current = "";
+    let previous = "";
+    let operator = "";
+
+    function press(num) {
+      current += num;
+      updateDisplay(current);
+    }
+
+    function addDecimal() {
+      if (!current.includes(".")) {
+        current += ".";
+        updateDisplay(current);
+      }
+    }
+
+    function clearDisplay() {
+      current = "";
+      previous = "";
+      operator = "";
+      updateDisplay(0);
+    }
+
+    function setOperator(op) {
+      if (current === "") return;
+      operator = op;
+      previous = current;
+      current = "";
+    }
+
+    function calculate() {
+      if (current === "" || previous === "" || operator === "") return;
+
+      let result = 0;
+      let num1 = parseFloat(previous);
+      let num2 = parseFloat(current);
+
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          if (num2 === 0) {
+            updateDisplay("Error");
+            return;
+          }
+          result = num1 / num2;
+          break;
+      }
+
+      updateDisplay(result);
+      current = result.toString();
+      previous = "";
+      operator = "";
+    }
+
+    function updateDisplay(output) {
+      document.getElementById("output").innerHTML = output;
+    }
+</script>
+</html>
