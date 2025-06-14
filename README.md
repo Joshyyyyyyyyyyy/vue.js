@@ -11,7 +11,7 @@ This roadmap will guide you step-by-step from beginner to building full-stack ap
 ### 🔹 Topics:
 - [/] Variables (`let`, `const`)
 - [/] Data types (string, number, boolean, null, undefined)
-- [ ] Conditionals (`if`, `else`, `switch`)
+- [/] Conditionals (`if`, `else`, `switch`)
 - [ ] Loops (`for`, `while`, `forEach`)
 - [ ] Functions (declaration, expression, arrow)
 - [ ] Arrays and Objects
@@ -21,7 +21,7 @@ This roadmap will guide you step-by-step from beginner to building full-stack ap
 
 ### 🛠️ Mini Projects:
 - [ ] To-Do List
-- [ ] Calculator
+- [/] Calculator
 - [ ] Number Guessing Game
 
 ---

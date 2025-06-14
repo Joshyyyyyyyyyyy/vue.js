@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="grade" id="inputValue" placeholder="Please input the grade">
+    <button onclick="checkGrade()">Check</button>
+    <div id="output"></div>
+</body>
+<script> 
+    function checkGrade(){
+        let grade = document.getElementById("inputValue").value;
+
+        if( grade >= 90 && grade <= 100){
+            document.getElementById("output").innerHTML = `A`;
+        } else if ( grade  >= 80 && grade <= 89){ 
+            document.getElementById("output").innerHTML = `B`;
+        } else if ( grade >= 70 && grade <= 79){
+            document.getElementById("output").innerHTML = `C`;
+        } else if ( grade >= 60 && grade <= 69){
+            document.getElementById("output").innerHTML = `D`;
+        } else {
+             document.getElementById("output").innerHTML = `F`;
+        }
+    }
+</script>
+</html>

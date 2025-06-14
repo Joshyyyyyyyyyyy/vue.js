@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputValue" placeholder="Please put a number">
+    <button onclick="oddEven()">Check</button>
+    <div id="output"></div>
+</body>
+<script>
+    function oddEven(){
+        let num = document.getElementById("inputValue").value;
+
+        if( num % 2 === 0){
+            document.getElementById("output").innerHTML = `This is even`;
+        } if ( num % 2 !== 0){
+            document.getElementById("output").innerHTML = `This is odd`;
+        } else {
+           document.getElementById("output").innerHTML = `This is even`;
+        }
+    }
+</script>
+</html>

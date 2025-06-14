@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputValue" placeholder="Enter your age">
+    <button onclick="verifyAge()">Check</button>
+    <div id="output"></div>
+</body>
+<script>
+    function verifyAge(){
+        let age = document.getElementById("inputValue").value;
+        if ( age > 18 ){
+            document.getElementById("output").innerHTML =`Your age is old enough to vote`;
+        } else if (age <  18 ) {
+            document.getElementById("output").innerHTML = `Your age is not qualified to vote`;
+        } else {
+            document.getElementById("output").innerHTML =  `Your age is old enough to vote`;
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="inputValue" placeholder="Please enter number">
+    <button onclick="dayNow()">Check</button>
+    <div id="output"></div>
+</body>
+<script>
+
+    function dayNow(){
+        let day = "";
+        let days =  parseInt(document.getElementById("inputValue").value) ;
+
+        switch(days){
+            case 1:
+            day = "Monday";
+            break;
+            case 2:
+            day = `Tuesday`;
+            break;
+            case 3:
+           day = `Wednesday`;
+            break;
+            case 4:
+            day = `Thursday`;
+            break;
+            case 5:
+           day = `Friday`;
+               break;
+            case 6:
+          day = `Saturday`;
+              break;
+            case 7:
+           day = `Sunday`;
+               break;
+        }
+        document.getElementById("output").innerHTML = day;
+    }
+</script>
+</html>
